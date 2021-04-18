@@ -1,0 +1,75 @@
+#mediaPipeContainer {
+  .mediaPipeViewer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #596e73;
+    height: 100%;
+    width: 100%;
+
+    .input_video {
+      position:relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      &.selfie {
+        transform: scale(-1, 1);
+      }
+    }
+
+    .output_canvas {
+      position:absolute;
+      height: 600px;
+      width: 600px;
+      left: 0;
+      top: 0;
+    }
+
+    .loading {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width:0px;
+          height:0px;
+          align-items: center;
+          backface-visibility: hidden;
+          justify-content: center;
+          opacity: 1;
+          transition: opacity 1s;
+
+          &.loaded {
+              opacity: 0 !important;
+          }
+
+          .message {
+            font-family: 'OleoScript';
+            font-size: 1.5em;
+            color: white;
+            margin-left: -150px;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+          }
+
+          .spinner {
+            font-family: Arial;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+
+  }
+
+
+
+
+  .control-panel {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+}
